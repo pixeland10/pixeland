@@ -146,8 +146,8 @@ const $=id=>document.getElementById(id);
 const base=$('base'),overlay=$('overlay'),stage=$('stage'),grid=$('grid'),rubber=$('rubber'),blink=$('blink'),loader=$('loader'),main=document.querySelector('main');
 const bctx=base.getContext('2d'),octx=overlay.getContext('2d');
 /* ================== SUPABASE : colle tes 2 valeurs ici (vide = mode local) ================== */
-const SB_URL=""; // ex: https://xxxxxxxx.supabase.co
-const SB_KEY=""; // ta cle "anon public"
+const SB_URL="https://ggncarjlqchezdbxnfsg.supabase.co/rest/v1/"; // ex: https://xxxxxxxx.supabase.co
+const SB_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdnbmNhcmpscWNoZXpkYnhuZnNnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc2ODg4MzcsImV4cCI6MjEwMzI2NDgzN30.TQCPAw_Ov5hooPdH2EqZx9YHWqoiro91JXB8wltm71o"; // ta cle "anon public"
 const sb=(SB_URL&&window.supabase)?window.supabase.createClient(SB_URL,SB_KEY):null;
 function uid(){return (window.crypto&&crypto.randomUUID)?crypto.randomUUID():('z'+Date.now().toString(36)+Math.random().toString(36).slice(2,8));}
 function zClean(z){const c={...z};delete c.idata;return c;}
